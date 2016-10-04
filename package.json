@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/kahneraja/blog-buddy#readme",
   "dependencies": {
+    "dotenv": "^2.0.0",
     "twitter": "^1.4.0"
   }
 }
