@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/kahneraja/blog-buddy/issues"
   },
-  "homepage": "https://github.com/kahneraja/blog-buddy#readme"
+  "homepage": "https://github.com/kahneraja/blog-buddy#readme",
+  "dependencies": {
+    "twitter": "^1.4.0"
+  }
 }
