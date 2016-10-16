@@ -14,7 +14,7 @@ getBlogFeed('http://kahneraja.com/feed.json', getLatestTweet);
 getOldFavorites(destroyOldFavorites);
 
 function getBlogFeed(url, callback){
-  console.log("getBlogFeed: " + url);
+  // console.log("getBlogFeed: " + url);
   http.get(url, function(res){
       var body = '';
 
@@ -34,7 +34,7 @@ function getBlogFeed(url, callback){
 }
 
 function getLatestTweet(q, callback){
-  console.log("getLatestTweet: " + q);
+  // console.log("getLatestTweet: " + q);
   var client = new Twitter(config);
 
   var params = {q: q, result_type: 'recent', count: 1};
@@ -54,7 +54,7 @@ function likeLatestTweet(id){
   var params = {id: id};
   client.post('favorites/create.json', params, function(error, favorite, response) {
     if (!error) {
-      console.log(favorite.text);
+      // console.log(favorite.text);
     } else {
       console.log(error);
     }
@@ -79,7 +79,7 @@ function destroyOldFavorites(favorites){
   for(let favorite of favorites)
   {
     var params = {id: favorite.id_str};
-    console.log("unfavorite: " + favorite.id_str);
+    // console.log("unfavorite: " + favorite.id_str);
     client.post('favorites/destroy.json', params, function(error, result, response) {
       if (!error) {
         // console.log(result.text);
