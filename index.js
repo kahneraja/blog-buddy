@@ -1,3 +1,5 @@
+"use strict";
+
 var http = require('http');
 var Twitter = require('twitter');
 var dotenv = require('dotenv');
@@ -48,7 +50,7 @@ function getLatestTweet(q, callback){
 };
 
 function likeLatestTweet(id){
-  console.log("likeLatestTweet: " + id);
+  // console.log("likeLatestTweet: " + id);
   var client = new Twitter(config);
 
   var params = {id: id};
